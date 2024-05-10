@@ -137,3 +137,53 @@ public:
     }
 };
 
+int main() {
+    // Введення розмірів та значень першого вектора
+    int size1;
+    std::cout << "Enter the size of the first vector: ";
+    std::cin >> size1;
+    VectorLong vector1(size1);
+    std::cout << "Enter the elements of the first vector: ";
+    std::cin >> vector1;
+
+    // Введення розмірів та значень другого вектора
+    int size2;
+    std::cout << "Enter the size of the second vector: ";
+    std::cin >> size2;
+    VectorLong vector2(size2);
+    std::cout << "Enter the elements of the second vector: ";
+    std::cin >> vector2;
+
+    // Додавання векторів
+    VectorLong sum = vector1 + vector2;
+    std::cout << "Sum of vectors: " << sum << std::endl;
+
+    // Віднімання векторів
+    VectorLong diff = vector1 - vector2;
+    std::cout << "Difference of vectors: " << diff << std::endl;
+
+    // Множення першого вектора на число
+    long scalar;
+    std::cout << "Enter a scalar value for multiplication: ";
+    std::cin >> scalar;
+    VectorLong product = vector1 * scalar;
+    std::cout << "Product of vector1 and scalar: " << product << std::endl;
+
+    // Перевірка на менше рівне
+    if (vector1 <= vector2) {
+        std::cout << "Vector1 is less than or equal to vector2." << std::endl;
+    }
+    else {
+        std::cout << "Vector1 is greater than vector2." << std::endl;
+    }
+    // завдання 2
+    Association associations;
+    associations["katerynka@gmail.com"]["last_name"] = "Shevchuk";
+    associations["katerynka@gmail.com"]["first_name"] = "Kateryna";
+    associations["katerynka@gmail.com"]["middle_name"] = "Mykhailivna";
+
+    associations.print();
+
+
+    return 0;
+}
